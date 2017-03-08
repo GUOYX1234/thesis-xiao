@@ -1,0 +1,132 @@
+\expandafter\def\csname CTEX@spaceChar\endcsname{\hspace{1em}}
+\documentclass[UTF8, pdftex, notypeinfo, hyperref]{CASthesis}
+\usepackage{indentfirst} % 首行缩进
+\usepackage{amssymb,bm,mathrsfs,bbm,amscd}
+\usepackage{hepunits}
+\usepackage{caption,subcaption}
+\usepackage{multirow}
+\usepackage[hidelinks,bookmarksdepth=4]{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{lineno}
+\usepackage{pdfpages}
+\usepackage[draft]{todonotes}
+\setlength{\marginparwidth}{2cm}
+% 设置图形文件的搜索路径
+\graphicspath{{chapter/}{figures/}}
+
+\usepackage{graphicx}          %设置eps转化为pdf
+\usepackage{epstopdf}          %插图使用的是eps，生成的是pdf的插图
+
+% 取消链接的颜色（黑白打印时）
+%\hypersetup{
+%    colorlinks=false,
+%}
+
+% 小节标题靠左对齐
+\CTEXsetup[format+={\flushleft}]{section}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  % 中文封面内容
+  \confidential{}
+  \title{BESIII多气隙电阻板室飞行时间探测器刻度方法的研究}
+  \author{郭迎晓}
+  \advisor{孙胜森~研究员}
+  \advisorinstitute{中国科学院高能物理研究所}
+  \chinesedegree{硕士}
+  \majordegree{工程硕士}
+  \major{计算机技术}
+  \submitdate{2017~年~6~月}
+  \institute{中国科学院高能物理研究所}
+
+  % 英文封面内容
+  \englishtitle{Study of calibration of the Multigap-Resistive Plate Chamber as Time of Flight Detector in BESIII experiment}
+  \englishauthor{Yingxiao Guo}
+  \englishadvisor{Prof. shengsen sun}
+  \englishinstitute{Institute of High Energy Physics}
+  \englishdegree{Master}
+  \englishmajordegree{Engineering}
+  \englishdate{June, 2016}
+
+  % 封面
+  %\maketitle
+
+  % 英文封面
+  %\makeenglishtitle
+
+  \includepdfmerge{cover.pdf, 1-4}
+  \includepdfmerge{statement.pdf}                 %直接插入中文，英文的封面
+
+
+  % 封面
+%  \maketitle
+
+  % 英文封面
+%  \makeenglishtitle
+
+%	\includepdfmerge{statement.pdf}
+%%
+%\linenumbers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 前言部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+  % 摘要
+%  \include{chapter/sub_abstract}
+
+  % 目录
+%  \tableofcontents
+  % 表格目录
+%  \listoftables
+  % 插图目录
+%  \listoffigures
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+%  \include{chapter/}
+  \include{chapter/chap2}
+%  \include{chapter/}
+%  \include{chapter/}
+%  \include{chapter/}
+%  \include{chapter/}
+
+  % 附录
+%  \appendix
+
+  %\include{chapter/chap-req}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 附件部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+  % 参考文献
+  % 使用 BibTeX
+%  \bibliography{tex}
+%  \nocite{*}
+  % 不使用 BibTeX
+  % \include{chapter/bib}
+
+  % 发表文章目录
+%  \include{chapter/pub}
+
+  % 个人简历
+%  \include{chapter/resume}
+
+  % 致谢
+%  \include{chapter/thanks}
+
+
+\end{document}
