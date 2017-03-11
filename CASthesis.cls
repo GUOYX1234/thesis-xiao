@@ -102,10 +102,13 @@
 \else
   \evensidemargin 1.5 true cm
 \fi
-\textheight 21 true cm
-\textwidth 14.5 true cm
-\headheight 15pt
-\parskip 0.5ex plus 0.25ex minus 0.25ex
+%\textheight 21 true cm
+%\textwidth 14.5 true cm
+%\headheight 15pt
+%\parskip 0.5ex plus 0.25ex minus 0.25ex
+\textheight 24.62 true cm                        
+\textwidth 14.66 true cm                      %这两句话对排版不起作用，但是时两个变量，之后的插图和插入页码用的到
+%\renewcommand{footnotesize}{9pt} %设置脚注字体大小
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
   \thispagestyle{empty}%
   \hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
@@ -151,7 +154,7 @@
     \bf\songti\zihao{-4}
         \hfill
       \CAST@label@confidential~
-      \CASTunderline[100pt]{\CAST@value@confidential}
+      \CASTunderline[100pt]{\CAfootnotesizeST@value@confidential}
     \vskip \stretch{2}
       \includegraphics[width=0.8\textwidth]{ucas}
     \vskip 10pt

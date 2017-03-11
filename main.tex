@@ -11,12 +11,20 @@
 \usepackage{lineno}
 \usepackage{pdfpages}
 \usepackage[draft]{todonotes}
-\setlength{\marginparwidth}{2cm}
+\usepackage{geometry}
+\geometry{left=3.17cm,right=3.17cm,top=2.54cm,bottom=2.54cm}
+
+\setlength{\marginparwidth}{0.5cm}
 % 设置图形文件的搜索路径
 \graphicspath{{chapter/}{figures/}}
 
 \usepackage{graphicx}          %设置eps转化为pdf
 \usepackage{epstopdf}          %插图使用的是eps，生成的是pdf的插图
+
+\usepackage{verbatim}          %可以使用命令注释掉大量的文字
+
+%\usepackage{subfig} 
+%\usepackage{subfigure}         %subfigure
 
 % 取消链接的颜色（黑白打印时）
 %\hypersetup{
@@ -63,16 +71,6 @@
   \includepdfmerge{cover.pdf, 1-4}
   \includepdfmerge{statement.pdf}                 %直接插入中文，英文的封面
 
-
-  % 封面
-%  \maketitle
-
-  % 英文封面
-%  \makeenglishtitle
-
-%	\includepdfmerge{statement.pdf}
-%%
-%\linenumbers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 前言部分
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -82,11 +80,11 @@
 %  \include{chapter/sub_abstract}
 
   % 目录
-%  \tableofcontents
+  \tableofcontents
   % 表格目录
-%  \listoftables
+  \listoftables
   % 插图目录
-%  \listoffigures
+  \listoffigures
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,7 +94,7 @@
 
 %  \include{chapter/}
   \include{chapter/chap2}
-%  \include{chapter/}
+%  \include{chapter/chap3}
 %  \include{chapter/}
 %  \include{chapter/}
 %  \include{chapter/}
