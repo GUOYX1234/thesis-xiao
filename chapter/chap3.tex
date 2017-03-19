@@ -98,7 +98,6 @@ f_{Nov}(m)=Aexp(\frac{-ln^2(1+t\frac{sinh(t\sqrt{ln4})}{t\sqrt{ln4}}\frac{m-m_{0
 \end{figure}
 
 基于此种分布，选用以下几种公式进行尝试，分别是:
-
 \begin{align}
 p_{0}+p_{1}/\sqrt{q}
 \label{eq:1}\\
@@ -118,11 +117,14 @@ p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3
 
 \subsection{尝试各种公式}
 
-\begin{figure}[h]
+图~\ref{fig:single-formula}~是上述几种公式拟合的结果。
+就这一条的拟合结果来看，公式~\ref{eq:5}~,也就是${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$的拟合最好。
+
+\begin{figure}[!h]
 \begin{minipage}{0.5\linewidth}
-  \centerline{\includegraphics[width=0.9\textwidth]{chap3/ban-order.eps}}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap3/half-order.eps}}
   \centerline{(a) 公式~\ref{eq:1}~的拟合}
-  \centerline{\label{fig:ban-order}}
+  \centerline{\label{fig:half-order}}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\linewidth}
@@ -132,21 +134,21 @@ p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3
 \end{minipage}
 \vfill
 \begin{minipage}{0.5\linewidth}
-  \centerline{\includegraphics[width=0.9\textwidth]{chap3/1-order.eps}}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap3/2-order.eps}}
   \centerline{(c) 公式~\ref{eq:3}~的拟合}
   \centerline{\label{fig:2-order}}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\linewidth}
-  \centerline{\includegraphics[width=0.9\textwidth]{chap3/1-order.eps}}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap3/3-order.eps}}
   \centerline{(d) 公式~\ref{eq:4}~的拟合}
   \centerline{\label{fig:3-order}}
 \end{minipage}
 \vfill
 \begin{minipage}{0.5\linewidth}
-  \centerline{\includegraphics[width=0.9\textwidth]{chap3/ban+1order.eps}}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap3/half-1-order.eps}}
   \centerline{(e) 公式~\ref{eq:5}~的拟合}
-  \centerline{\label{fig:ban+1order}}
+  \centerline{\label{fig:half-1-order}}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\linewidth}
@@ -155,8 +157,12 @@ p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3
   \centerline{\label{fig:pol3-order}}
 \end{minipage}
 \caption{几种公式对~TOT~的拟合}
-\label{fig:res}
+\label{fig:single-formula}
 \end{figure}
+
+表~\ref{tbl:resolution}~给出了这几种公式修正完成后得到的时间分辨。可以看出公式${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$的结果是最好的。
+
+在此研究的基础上随机选了两个模块，然后比较几种公式修正得到的时间分辨的。见图~\ref{fig:single-module45}~和图~\ref{fig:single-module50}~。可以看出，除了使用多项式外，公式${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$得到的时间分辨基本是最好的。而不选用多项式的原因是因为，多项式拟合在~TOT~比较大的一端拟合的不好，并未真正的反映出时间随~TOT~在大~TOT~下趋于平滑的这种趋势。
 
 \begin{table}[h]
     \centering
@@ -166,42 +172,34 @@ p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3
         \hline
         公式& 时间分辨(ps) \\
         \hline
-        ${p_{0}+p_{1}/\sqrt{q}}$ & 0 \\
-        ${p_{0}+p_{1}/q}$ & 0 \\
-        ${p_{0}+p_{1}/q^{2}}$ & 0 \\
-        ${p_{0}+p_{1}/q^{3}}$ & 0 \\
-        ${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$ & 0 \\
-        ${p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3}$ & 0 \\
+        ${p_{0}+p_{1}/\sqrt{q}}$ & 65.6 \\
+        ${p_{0}+p_{1}/q}$ & 65.1 \\
+        ${p_{0}+p_{1}/q^{2}}$ & 63.9 \\
+        ${p_{0}+p_{1}/q^{3}}$ & 63.9 \\
+        ${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$ & 63.9 \\
+        ${p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3}$ & 64.3 \\
         \hline
     \end{tabular}
 \end{table}
 
-\begin{comment}
-\begin{table}[h]
-    \centering
-    \caption{\label{tbl:scint-detectors} 一些液闪探测器的属性}
-  \footnotesize
-    %\begin{tabular}{lp{2cm}p{2cm}p{1cm}p{2cm}p{2cm}}
-    \begin{tabular}{lccccc}
-        \hline
-        探测器名称& 质量, kton  & PMT 数目 & 覆盖率 & p.e./\MeV & 时间 \\
-                  & (模块数)    & (直径, cm) \\
-        \hline
-        KamLAND & 0.41 & 1325 (43) + 554 (51) & 34\% & 460 & 2002- \\
-        Borexino & 0.1 & 2212 (20) & 30\% & 500 & 2007- \\
-        SNO+ & 0.78 & 9438 (20) & 54\% & 400-900 & 2014- \\
-        CHOOZ & 0.005 (Gd) & 192 (20) & 15\% & 130 & 1997-1998 \\
-        Double Chooz & 0.017 (Gd) (2) & 534/module (20) & 13\% & 180 & 2011- \\
-        Daya Bay & 0.160 (Gd) (8) & 192/module (20) & 5.6\% & 100 & 2011- \\
-        RENO & 0.032 (Gd) (2) & 342/module (20) & 12.6\% & 100 & 2011- \\
-        \hline
-    \end{tabular}
-\end{table}
-\end{comment}
-\subsection{确定主项公式}
-
-贴图：贴出两块tofid=55，tofid=？
-决定选用 公式~${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$~为刻度~TOT~的公式。
+\begin{figure}[!h]
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap3/single-module45.eps}
+\subcaption{模块编号为45的几种公式时间分辨的比较}
+\label{fig:single-module45}
+\end{minipage}%
+\hfill
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap3/single-module50.eps}
+\subcaption{模块编号为50的几种公式时间分辨的比较}
+\label{fig:single-module50}
+\end{minipage}
+\caption{几种公式修正得到的时间分辨的比较}
+\end{figure}
+基于单条的拟合结果，以及比较多块的最终的时间分辨。
+决定选用公式~${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$~为刻度~TOT~的公式。在下一章双端部分会发现这个公式对于双端的拟合也是适用的。
 
 \section{小结}
 

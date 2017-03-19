@@ -1,11 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{Shao:2009aa}
-Ming Shao. et~al.
-\newblock {Upgrade of the calibration procedure for a STAR time-of-flight
-  detector with new electronics}.
-\newblock {\em IOP science.}, 20:025102, 2009.
-
 \bibitem{Bian:2010aa}
 BIAN jian Ming. et~al.
 \newblock {Abosolute photon energy calibration for the BESIII EMC}.
@@ -15,6 +9,12 @@ BIAN jian Ming. et~al.
 {杜东生,~杨茂志}.
 \newblock {\em 粒子物理导论}.
 \newblock 北京科学出版社, 2014.
+
+\bibitem{Shao:2009aa}
+Ming Shao. et~al.
+\newblock {Upgrade of the calibration procedure for a STAR time-of-flight
+  detector with new electronics}.
+\newblock {\em IOP science.}, 20:025102, 2009.
 
 \bibitem{Nov:2000aa}
 Bauer A~J M.

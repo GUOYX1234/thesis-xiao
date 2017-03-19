@@ -3,7 +3,7 @@
 % -*- root: ../main.tex -*-
 % -*- program: pdflatex -*-
 \chapter{双端修正}
-上两章主要从插值方法和构造公式入手介绍了对TOF的MRPC的离线数据的刻度方法。研究的主要是单端的刻度。这章将介绍双端刻度方法。
+上两章主要从插值方法和构造公式入手介绍了对TOF的MRPC的离线数据的刻度方法,研究的主要是单端的刻度。这章将介绍双端刻度方法。
 
 \begin{figure}[!h]
 \begin{minipage}[!h]{0.5\linewidth}
@@ -25,12 +25,208 @@
 图~\ref{fig:combined-tVSz}~和图~\ref{fig:combined-tVSq}~是双端的时间对~Z~和~TOT~的分布。所谓双端指的是两端时间的平均值，~TOT~采用的也是两端~TOT~的平均值。从图中可以看出，双端的时间对~Z~的依赖很小，主要就是时间对~TOT~的依赖关系。而这时的时间对~TOT~的依赖关系和单端修正~Z~后时间对~TOT~的分布很类似。因此对于双端修正，直接对~TOT~修正，采用和单端修正~Z~后处理时间与~TOT~的关系相同的办法。
 
 \section{双端插值方法}
-也是先利用插值方法对双端进行修正。
+
+\begin{figure}[!h]
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap4/combined-splines.eps}
+\subcaption{双端插值}
+\label{fig:combined-splines}
+\end{minipage}%
+\hfill
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap4/combined-splines-line.eps}
+\subcaption{双端插值线}
+\label{fig:combined-splines-line}
+\end{minipage}
+\caption{双端插值方法}
+\end{figure}
+
+图~\ref{fig:combined-splines}~和图~\ref{fig:combined-splines-line}~表示的是双端的插值方法。图~\ref{fig:combined-splines}~采用的是和单端处理时间和~TOT~的一样的方法：将时间和~TOT~按~TOT~大小等事例数分成100份，对每个~bin~拟合得到中心值。图~\ref{fig:combined-splines-line}~表示的是对此100个点采用三阶样条插值拟合得到的曲线。
+
 \section{双端构造公式}
+
+图~\ref{fig:single-formula}~是上述几种公式拟合的结果。
+就这一条的拟合结果来看，公式~\ref{eq:5}~,也就是${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$的拟合最好。
+
+\begin{figure}[!h]
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/double-half-order.eps}}
+  \centerline{(a) 公式~\ref{eq:1}~的拟合}
+  \centerline{\label{fig:double-half-order}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/double-1-order.eps}}
+  \centerline{(b) 公式~\ref{eq:2}~的拟合}
+  \centerline{\label{fig:double-1-order}}
+\end{minipage}
+\vfill
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/double-2-order.eps}}
+  \centerline{(c) 公式~\ref{eq:3}~的拟合}
+  \centerline{\label{fig:double-2-order}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/double-3-order.eps}}
+  \centerline{(d) 公式~\ref{eq:4}~的拟合}
+  \centerline{\label{fig:double-3-order}}
+\end{minipage}
+\vfill
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/double-half-1-order.eps}}
+  \centerline{(e) 公式~\ref{eq:5}~的拟合}
+  \centerline{\label{fig:double-half-1-order}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/double-pol3-order.eps}}
+  \centerline{(f) 公式~\ref{eq:6}~的拟合}
+  \centerline{\label{fig:double-pol3-order}}
+\end{minipage}
+\caption{几种公式对~TOT~的拟合}
+\label{fig:single-formula}
+\end{figure}
+
+表~\ref{tbl:combined-resolution}~给出了这几种公式修正完成后得到的时间分辨。可以看出公式${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$的结果是最好的。
+
+在此研究的基础上随机选了两个模块，然后比较几种公式修正得到的时间分辨的。见图~\ref{fig:double-module45}~和图~\ref{fig:double-module50}~。可以看出，除了使用多项式外，公式${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$得到的时间分辨基本是最好的。而不选用多项式的原因是因为，多项式拟合在~TOT~比较大的一端拟合的不好，并未真正的反映出时间随~TOT~在大~TOT~下趋于平滑的这种趋势。
+
+\begin{table}[h]
+    \centering
+    \caption{\label{tbl:combined-resolution} 上述公式修正后最终的时间分辨}
+  \footnotesize
+    \begin{tabular}{lc}
+        \hline
+        公式& 时间分辨(ps) \\
+        \hline
+        ${p_{0}+p_{1}/\sqrt{q}}$ & 60.1 \\
+        ${p_{0}+p_{1}/q}$ & 58.9 \\
+        ${p_{0}+p_{1}/q^{2}}$ & 65.9 \\
+        ${p_{0}+p_{1}/q^{3}}$ & 56.7 \\
+        ${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$ & 56.4 \\
+        ${p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3}$ & 56.6 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[!h]
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap4/double-module45.eps}
+\subcaption{模块编号为45的几种公式时间分辨的比较}
+\label{fig:double-module45}
+\end{minipage}%
+\hfill
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap4/double-module50.eps}
+\subcaption{模块编号为50的几种公式时间分辨的比较}
+\label{fig:double-module50}
+\end{minipage}
+\caption{几种公式修正得到的时间分辨的比较}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap4/Form-tVSz1.eps}
+\subcaption{双端修正~TOT~后时间对~Z~的分布}
+\label{fig:Form-tVSz1}
+\end{minipage}%
+\hfill
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap4/Form-sigma1.eps}
+\subcaption{双端修正~TOT~后的时间分辨}
+\label{fig:Form-sigma1}
+\end{minipage}
+\caption{双端修正~TOT~后的分布}
+\end{figure}
+
 \section{双端对~Z~的修正}
-为了绕开径迹外推的信息~zrhit~，采用类似的信息(tleft-tright)/2
+
+图~\ref{fig:Form-tVSz1}~给出了双端时间修正过~TOT~后时间对~Z~的分布，可以看出还是有一定的依赖的。对此需要对击中位置~Z~进行修正。
+
+%%这部分需要写完前面的径迹外推后再写。
+击中位置~zrhit~来自于径迹外推。在读数条边界处会有偏差。为了避开使用~zrhit~，选择使用~(tleft-tright)/2~代替它。
+tleft=(L+zrhit)/v+$C_{0}$;
+tright=(L-zrhit)/v+$C_{1}$
+两式相减除2得(tleft-tright)/2=zrhit/v+$C_{2}$
+其中~L~为半个读数条长，为一常量；~v~为信号在读数条内的传播速度，为常量；$C_{0}$,$C_{1}$分别是两端的时延等信息，为常量。$C_{2}$=$C_{0}$-$C_{1}$；综上得出(tleft-tright)/2与~zrhit~成正相关。
+
+图~\ref{fig:zVStsub}~是~tsub~和~zrhit~的分布，可以看出呈线性关系。
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\textwidth]{chap4/zVStsub.eps}
+\caption{~zrhit~与~(tleft-tright)/2~的分布}
+\label{fig:zVStsub}
+\end{figure}
+
+基于此，可以利用(tleft-tright)/2信息修正zrhit。
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\textwidth]{chap4/Form-Fit-Tsub.eps}
+\caption{对~tsub~采用四阶多项式拟合}
+\label{fig:Form-Fit-Tsub}
+\end{figure}
+
+图~\ref{fig:Form-Fit-Tsub}~是对~tsub~采用了一个四阶多项式的修正。采用四阶多项式的原因是，更低阶的多项式不能完全拟合时间和~tsub~的这种变化的关系。而更高阶多项式也不能得到比四阶多项式更好的拟合。
+
+图~\ref{fig:Fit-Tsub}~是修正~tsub~前后，时间对~tsub~和~Z~的分布关系。可以看出，修正过~tsub~后，时间对~Z~的分布不再有明显的依赖。
+\begin{figure}[!h]
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/before-offset-tsub.eps}}
+  \centerline{(a) ~tsub~修正前时间对~tsub~的分布}
+  \centerline{\label{fig:before-offset-tsub}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/before-offset-z.eps}}
+  \centerline{(b) ~tsub~修正前时间对~Z~的分布}
+  \centerline{\label{fig:before-offset-z}}
+\end{minipage}
+\vfill
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/after-offset-tsub.eps}}
+  \centerline{(c) ~tsub~修正后时间对~tsub~的分布}
+  \centerline{\label{fig:after-offset-tsub}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+  \centerline{\includegraphics[width=0.9\textwidth]{chap4/after-offset-z.eps}}
+  \centerline{(d) ~tsub~修正后时间对~Z~的分布}
+  \centerline{\label{fig:after-offset-z}}
+\end{minipage}
+\caption{~tsub~修正前后时间对~tsub~和~Z~的分布}
+\label{fig:Fit-Tsub}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap4/Form-tVSz2.eps}
+\subcaption{双端修正~tsub~后时间对~Z~的分布}
+\label{fig:Form-tVSz2}
+\end{minipage}%
+\hfill
+\begin{minipage}[!h]{0.5\linewidth}
+%\centering
+\includegraphics[width=0.9\textwidth]{chap4/Form-sigma2.eps}
+\subcaption{双端修正~tsub~后的时间分辨}
+\label{fig:Form-sigma2}
+\end{minipage}
+\caption{双端修正~tsub~后的分布}
+\end{figure}
+
+图~\ref{fig:Form-tVSz2}~是修正~tsub~后时间对~Z~的分布的散点图。可以看出这时候分布关系已经基本平滑。图~\ref{fig:Form-sigma2}~是修正~tub~后双端的时间分辨，为~53.5ps~。
+
 \section{小结}
 
+本章介绍了双端刻度方法的研究。在对~TOT~的修正上，采用的是和单端对此修正一样的方法。但对于~Z~的修正，由于边界效应，径迹外推得到的~zrhit~在读数条两端有偏差。基于此，采用了和~zrhit~类似的信息~(tleft-tright)/2~的信息对~Z~进行修正。最终得到双端的修正后的时间分辨等信息。
 
 
 
