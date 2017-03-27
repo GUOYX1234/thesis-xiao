@@ -1,17 +1,42 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: unsrt.bst
-A level-1 auxiliary file: chapter/chap3.aux
-A level-1 auxiliary file: chapter/chap4.aux
+A level-1 auxiliary file: chapter/chap0.aux
+A level-1 auxiliary file: chapter/chap1.aux
 Database file #1: tex.bib
-Unbalanced braces---line 107 of file tex.bib
+I was expecting a `,' or a `}'---line 132 of file tex.bib
+ :       address =      {北京}
+ :                              ，
+I'm skipping whatever remains of this entry
+You're missing a field name---line 339 of file tex.bib
+ : 
+ : %      title          = "{}",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 348 of file tex.bib
+ : 
+ : %      title          = "{}",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 400 of file tex.bib
  : 
  : }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 128 of file tex.bib
+You're missing a field name---line 421 of file tex.bib
  : 
  : %      pages          = "521"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--empty journal in ihep:2003
+Warning--empty journal in ihep:2006
+Warning--empty journal in liwd:2006
+Warning--empty journal in Barrand:2000
+Warning--empty title in zhangxm:2005
+Warning--empty journal in zhangxm:2005
+Warning--empty year in zhangxm:2005
+Warning--empty title in max:2007
+Warning--empty journal in max:2007
+Warning--empty year in max:2007
+Warning--empty journal in M:2014
 Warning--empty journal in Nov:2000aa
-(There were 2 error messages)
+(There were 5 error messages)
