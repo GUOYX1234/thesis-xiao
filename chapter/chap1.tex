@@ -4,29 +4,29 @@
 % -*- program: pdflatex -*-
 \chapter{~MRPC~端盖~TOF~离线数据}
 原来的端盖~TOF~采用的塑料闪烁体，分东西两部分，每部分单层结构，闪烁体为扇形，光电倍增管垂直耦合，放置于扇形闪烁体的内端。每部分有~48~块。
-图~\ref{fig:end-TOF-sigma}~给出了~ETOF~的时间分辨。
+图~\ref{fig:end-TOF-sigma}~给出了~端盖TOF~的时间分辨。
 对于双~$\mu$子~事例样本，时间分辨为~110ps~，~Bhabha~事例中，时间分辨为增至~148ps~\cite{zhaoc:2011}。分辨率的差异主要来自不同粒子与实
 验装置材料不同作用的差别，由于~$\mu$~散射最小，击中塑料闪烁体的位置不确定性较小，相比较~Bhabha~中的电子事例而言（由于位置的不确定性以及多次散射）非本征的时间分辨贡献小，因而时间分辨较好。
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.9\textwidth]{chap1/end-TOF-sigma.png}
-  \caption{端盖ETOF 的时间分辨：(a)电子和(b)~$\mu$~子}
+  \caption{端盖TOF 的时间分辨：(a)电子和(b)~$\mu$~子}
   \label{fig:end-TOF-sigma}
 \end{figure}
-图~\ref{fig:end-TOF-eff}~给出了~ETOF~的各探测单元的效率。探测效率大致为~96$\%$~\cite{wangxz2016}。
+图~\ref{fig:end-TOF-eff}~给出了~端盖TOF~的各探测单元的效率。探测效率大致为~96$\%$~\cite{wangxz2016}。
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.8\textwidth]{chap1/end-TOF-eff.png}
-  \caption{端盖ETOF 的各探测器单元的效率}
+  \caption{端盖TOF 的各探测器单元的效率}
   \label{fig:end-TOF-eff}
 \end{figure}
 
-对于~ETOF~而言，由于多次击中粒子，导致性能相比桶部明显较差。~ETOF~的~$\pi/K$~的分辨能力如图~\ref{fig:end-TOF-PID}~\cite{zhaoc:2011}所示，在~95.4$\%$(2$\sigma$)~正确率下，基本满足动量~1.1GeV~以内的~$\pi/K$~介子的鉴别。
+对于~端盖TOF~而言，由于多次击中粒子，导致性能相比桶部明显较差。~端盖TOF~的~$\pi/K$~的分辨能力如图~\ref{fig:end-TOF-PID}~\cite{zhaoc:2011}所示，在~95.4$\%$(2$\sigma$)~正确率下，基本满足动量~1.1GeV~以内的~$\pi/K$~介子的鉴别。
 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.9\textwidth]{chap1/end-TOF-PID.png}
-  \caption{~1.0Gev~下$\pi$~(a)和~$K$~(b)的时间分辨；(c):端盖~ETOF~不同角度下的$\pi/K$ 分辨}
+  \caption{~1.0Gev~下$\pi$~(a)和~$K$~(b)的时间分辨；(c):端盖~TOF~不同角度下的$\pi/K$ 分辨}
   \label{fig:end-TOF-PID}
 \end{figure}
 
@@ -47,7 +47,7 @@ BESIII~谱仪的设计目标是在~$\tau$-粲能区的高精度测量，在这�
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.5\textwidth]{chap1/MRPC-TOF.png}
-  \caption{BESIII/ETOF 双层MRPC阵列结构示意图}
+  \caption{BESIII/端盖TOF 双层MRPC阵列结构示意图}
   \label{fig:MRPC-TOF}
 \end{figure}
 
@@ -64,7 +64,7 @@ MRPC模型几何结构如图~\ref{fig:MRPC}~所示。模块采用双层堆叠的
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.9\textwidth]{chap1/MRPC.png}
-  \caption{ETOF 升级MRPC 的结构图}
+  \caption{端盖TOF 升级MRPC 的结构图}
   \label{fig:MRPC}
 \end{figure}
 
@@ -76,7 +76,7 @@ MRPC的电子学系统设计方案和电子学系统包含前端放大甄别FEE(
 整个系统共72个FEE模块，FEE模块采用基于TOT技术的NINO芯片，每个FEE模块含有4片NINO芯片，产生24路LVDS电平的输出信号，共完成1728路信号的放大甄别。
 MRPC输出电荷约为几十fC， 脉冲上升时间$<$1ns，实验上必须对输出信号电流进一步放大和成形。~NINO-ASIC~芯片采用差分的输入，全线路的差分信号处理，最大程度的利用了~MRPC~本身产生的差分信号。NINO~对输入信号进行快放大，同时~NINO~ 将输入的信号电流转换为输出的信号宽度，以满足~TOT~测量的需要。
 飞行时间数字化插件TDIG。使用HPTDC芯片，接收和数字化前端电子学输出的信号并根据数据格式打包，经VME总线上传至DAQ系统。~NINO~配合~HPTDC~同时测量出信号过阈时间的前沿时间(leading edge)和后沿时间(trailing edge)。其中前沿时间用来定时，结合前沿时间和后沿时间的~TOT~用来修正过阈时间不同引起的时间晃动。
-ETOF电子学系统中，CTTP插件共两块，一个CTTP插件对应36个FEE模块。插件接收NINO芯片产生的击中信息，通过光纤上传至触发系统；为NINO芯片提供阈值电压，电源和测试信号，使芯片正常运行和满足测试需求。CTTP插件同时还完成快控制功能。
+端盖TOF电子学系统中，CTTP插件共两块，一个CTTP插件对应36个FEE模块。插件接收NINO芯片产生的击中信息，通过光纤上传至触发系统；为NINO芯片提供阈值电压，电源和测试信号，使芯片正常运行和满足测试需求。CTTP插件同时还完成快控制功能。
 时钟扇出插件为TDIG和CTTP插件提供同步时钟信号。
 
 \section{BESIII离线数据处理和分析系统}
@@ -96,7 +96,7 @@ BOSS软件平台可以为包括离线刻度、事例重建、事例分类、蒙�
 图~\ref{fig:BESIII-software}给出了BESIII离线软件平台的整体结构图。其中的模拟、刻度、重建和物理分析算法是离线数据处理和物理分析的核心。
 \begin{figure}[!h]
   \centering
-  \includegraphics[width=0.9\textwidth]{chap1/BESIII-data-flow.png}
+  \includegraphics[width=0.9\textwidth]{chap1/BESIII-software.png}
   \caption{BESIII离线软件平台}
   \label{fig:BESIII-software}
 \end{figure}
@@ -133,7 +133,7 @@ BEPCII采用多束团对撞机制，BEPCII的高频时钟为499.8MHz，周期为
   \caption{事例起始时间程序流程图}
   \label{fig:Test}
 \end{figure}
-\subsection{MDC的径迹外推}
+\subsection{主漂移室的径迹外推}
 
 ~BESIII~主漂移室重建径迹的外推算法采用面向对象的设计方法, 利用~GEANT4~部分代码开发实现, 它提供主漂移室带电径迹外推到外部其他子探测器上的预期径迹信息。该算法的外推过程考虑了带电径迹在磁场中的偏转以及与探测器物质相互作用造成的电离能损, 并为径迹参数计算考虑了库仑多次散射效应影响在内的参数误差矩阵.
 
@@ -147,7 +147,7 @@ BEPCII采用多束团对撞机制，BEPCII的高频时钟为499.8MHz，周期为
   \label{fig:TrkExtAlg}
 \end{figure}
 
-\subsection{TOF重建}
+\subsection{飞行时间探测器的重建}
 TOF离线数据重建流程如图~\ref{fig:TOF-res}~所示。
 TOF电子学系统给出TOF的时间信号和幅度信号。MDC重建和KalmanFilter径迹拟合得到带电径迹的动量和径迹长度等信息~\cite{wulh2007}~\cite{wangjk2009}，进而计算出粒子飞行的预期时间，径迹外推给出击中TOF的位置信息~\cite{wangll:2014}，事例起始时间算法~\cite{Maxiang:2008}给出$t_{0}$信息，利用这些信息结合刻度得到的刻度常数完成TOF的离线数据重建。
 \begin{figure}[!h]
@@ -218,33 +218,33 @@ tright=TDC2-t_{0}
 
 刻度的目的正是修正除了飞行时间外的其它时间的贡献。其中信号在电缆的传播时间和电子学的时延是常数项，信号在读数条的传播时间是一个依赖击中位置的时间量。过阈时间的晃动是和信号的大小有关的量。
 
-BESIII系统的坐标定义为：正Z轴沿着束流方向，水平向东；正Y轴指向天空，竖直向上；正X轴取水平向北。取对撞点为坐标原点O(0,0,0)。空间某一点P(x,y,z)的方位角定义为直线OP从正X轴沿逆时针在Z—Y平面投影的角度$\phi$，在端盖~MRPC~中对应的不同模块的编号tofid和相同模块不同的击中位置~zrhit(来自径迹外推）。OP的极角定义为OP和正Z轴的夹角$cos\theta$，在端盖~MRPC~中对应的是读数条的编号~strip。
+BESIII系统的坐标定义为：正Z轴沿着束流方向，水平向东；正Y轴指向天空，竖直向上；正X轴取水平向北。取对撞点为坐标原点O(0,0,0)。空间某一点P(x,y,z)的方位角定义为直线OP从正X轴沿逆时针在Z—Y平面投影的角度$\phi$，在端盖~MRPC~中对应的不同模块的编号和相同模块不同的击中位置(来自径迹外推）。OP的极角定义为OP和正Z轴的夹角$cos\theta$，在端盖~MRPC~中对应的是读数条的编号。
 
 之前已经介绍了利用~MDC~重建和卡曼滤波径拟合可以得到带电径迹的动量和径迹长度的信息，进而可以求出带电粒子的预期飞行时间$t_{exp}$。
 
-至此，刻度需要的所有相关量已经介绍完了。包括电子学系统测量的量：初始时间~tleft,tright~(TDC扣除$t_{0}$的时间在本论文中仍旧称为初始时间),过阈时间~qleft，qright~(测量的两个TOT的值在本文中都表示成~qleft，qright~的形式)；外推的量：击中位置~zrhit，预期时间~$t_{exp}$，以及模块的编号~tofid，读数条的编号~strip。
-\subsection{MRPC离线刻度的时间，TOT，zrhit等的原始分布}
-图~\ref{fig:some-Diagram}~给出了MRPC离线刻度的一些原始的分布。上面的三幅图是原始的时间，过阈时间和击中位置分布的一维图，其中~\ref{fig:left-t}~是原始的时间tleft的分布；~\ref{fig:left-q}~是原始的过阈时间qleft的分布，可以明显看出，存在多峰现象；~\ref{fig:left-z}~是击中位置zrhit的分布，可以看出事例数随着zrhit是分布均匀的。下面三幅图是原始的时间，过阈时间和击中位置相互关系的二维图，其中~\ref{fig:left-tVSz}~表示时间随击中位置的分布，这个关系近似线性，这是刻度的主要项之一；~\ref{fig:left-tVSq}~表示时间随过阈时间的分布，关系分布复杂，这也是刻度的主要项之一；~\ref{fig:left-qVSz}~表示过阈时间和击中位置的分布。
+至此，刻度需要的所有相关量已经介绍完了。包括电子学系统测量的量：初始时间~$t_{left}$,$t_{right}$~(TDC扣除$t_{0}$的时间在本论文中仍旧称为初始时间),过阈时间~qleft，qright~(测量的两个过阈时间的值在本文中都表示成~qleft，qright~的形式)；外推的量：击中位置~zrhit，预期时间~$t_{exp}$，以及模块的编号~tofid，读数条的编号~strip。
+\subsection{MRPC离线刻度的时间，过阈时间，击中位置等的原始分布}
+图~\ref{fig:some-Diagram}~给出了MRPC离线刻度的一些原始的分布。上面的三幅图是原始的时间，过阈时间和击中位置分布的一维图，其中~\ref{fig:left-t}~是原始的时间分布；~\ref{fig:left-q}~是原始的过阈时间的分布，可以明显看出，存在多峰现象；~\ref{fig:left-z}~是击中位置的分布，可以看出事例数随着击中位置是分布均匀的。下面三幅图是原始的时间，过阈时间和击中位置相互关系的二维图，其中~\ref{fig:left-tVSz}~表示时间随击中位置的分布，这个关系近似线性，这是刻度的主要项之一；~\ref{fig:left-tVSq}~表示时间随过阈时间的分布，关系分布复杂，这也是刻度的主要项之一；~\ref{fig:left-qVSz}~表示过阈时间和击中位置的分布。
 
 \begin{figure}[htbp]
 \begin{minipage}[t]{0.33\linewidth}
 %\centering
 \includegraphics[width=0.9\textwidth]{chap1/left-t.eps}
-\subcaption{原始时间tleft的分布}
+\subcaption{原始时间的分布}
 \label{fig:left-t}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.33\linewidth}
 %\centering
 \includegraphics[width=0.9\textwidth]{chap1/left-q.eps}
-\subcaption{过阈时间qleft的分布(多峰)}
+\subcaption{过阈时间的分布(多峰)}
 \label{fig:left-q}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.33\linewidth}
 %\centering
 \includegraphics[width=0.9\textwidth]{chap1/left-z.eps}
-\subcaption{击中位置zrhit的分布}
+\subcaption{击中位置的分布}
 \label{fig:left-z}
 \end{minipage}
 \vfill
@@ -294,14 +294,14 @@ BESIII系统的坐标定义为：正Z轴沿着束流方向，水平向东；正Y
 \end{minipage}%
 \caption{反射问题和过阈时间}
 \end{figure}
-信号在读数条的传播时间项如图~\ref{fig:left-tVSz}~所示，近似是一个线性的关系。预估采用低阶多项式即可完成修正。而过阈时间修正项如图~\ref{fig:left-tVSq}~所示，可以看出时间对TOT的分布存在折线关系，分布复杂，需要分析这种折线分布背后的产生的机制。采用合适的方式处理这种关系。
+信号在读数条的传播时间项如图~\ref{fig:left-tVSz}~所示，近似是一个线性的关系。预估采用低阶多项式即可完成修正。而过阈时间修正项如图~\ref{fig:left-tVSq}~所示，可以看出时间对过阈时间的分布存在折线关系，分布复杂，需要分析这种折线分布背后的产生的机制。采用合适的方式处理这种关系。
 图~\ref{fig:TOT}~是信号的过阈时间。对于一定的阈值，幅度大小不同的信号，对应的过阈时间不同。信号幅度越大，过阈时间也就越大。
 图~\ref{fig:left-q}~中~TOT~的多峰来自于反射。
-图~\ref{fig:reflection}~是~MRPC~读数条的反射问题，分为近端反射和远端反射。由于读数条本身较短，反射信号只是比真实信号时间晚不到1ns，这样导致反射信号和原来的真实信号叠加。测量的~TOT~也就变大了。
-正是由于过阈时间和反射问题的存在，导致时间对~TOT~的分布复杂。对时间和~TOT~的关系的研究也刻度研究的重点和难点部分。
+图~\ref{fig:reflection}~是~MRPC~读数条的反射问题，分为近端反射和远端反射。由于读数条本身较短，反射信号只是比真实信号时间晚不到1ns，这样导致反射信号和原来的真实信号叠加。测量的~过阈时间~也就变大了。
+正是由于过阈时间和反射问题的存在，导致时间对~过阈时间~的分布复杂。对时间和~过阈时间~的关系的研究也刻度研究的重点和难点部分。
 
 \section{小结}
-本章首先介绍了原来的端盖闪烁体~TOF~的时间分辨等性能，由于时间分辨达不到~BESIII~实验高精度测量的要求，端盖~TOF~在~2015~年完成了升级改造，换成了时间分辨更好的~MRPC~探测器。~MRPC~探测器作为一种新型的飞行时间探测器，具有时间分辨好，探测效率高，造价便宜等优势。之后介绍了BESIII实验的MRPC的结构。~BESIII~的离线数据处理和分析系统可以处理包括模拟、刻度、重建和物理分析等一系列的物理问题，其中~BOSS~是整个离线软件的核心。然后介绍了事例起始时间的重建，MDC~的径迹外推，以及~TOF~的离线数据重建过程。最后介绍了~MRPC~端盖TOF的一些原始分布以及刻度的主要内容，由于反射的原因，导致时间和TOT的关系分布复杂。过阈时间的修正是刻度的重点和难点部分。
+本章首先介绍了原来的端盖闪烁体~TOF~的时间分辨等性能，由于时间分辨达不到~BESIII~实验高精度测量的要求，端盖~TOF~在~2015~年完成了升级改造，换成了时间分辨更好的~MRPC~探测器。~MRPC~探测器作为一种新型的飞行时间探测器，具有时间分辨好，探测效率高，造价便宜等优势。之后介绍了BESIII实验的MRPC的结构。~BESIII~的离线数据处理和分析系统可以处理包括模拟、刻度、重建和物理分析等一系列的物理问题，其中~BOSS~是整个离线软件的核心。然后介绍了事例起始时间的重建，MDC~的径迹外推，以及~TOF~的离线数据重建过程。最后介绍了~MRPC~端盖TOF的一些原始分布以及刻度的主要内容，由于反射的原因，导致时间和过阈时间的关系分布复杂。过阈时间的修正是刻度的重点和难点部分。
 
 
 

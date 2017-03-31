@@ -3,13 +3,13 @@
 % -*- root: ../main.tex -*-
 % -*- program: pdflatex -*-
 \chapter{构造公式方法}
-上一章主要从插值方法入手介绍了对TOF的MRPC的离线数据的刻度方法。这一章将从构造公式入手对此刻度进行研究。仍然采用~Z~和~TOT~分开修正的方法。其中对于~Z~的修正采用简单的多项式构造，对于~TOT~的修正，通过分析时间对~TOT~的分布，构造出几种简单的公式，并比较拟合的情况和拟合的结果，最终确定~TOT~项的公式。
+上一章主要从插值方法入手介绍了对TOF的MRPC的离线数据的刻度方法。这一章将从构造公式入手对此刻度进行研究。仍然采用击中位置和过阈时间分开修正的方法。其中对于击中位置的修正采用简单的多项式构造，对于过阈时间的修正，通过分析时间对过阈时间的分布，构造出几种简单的公式，并比较拟合的情况和拟合的结果，最终确定过阈时间项的公式。
 
 \begin{figure}[!h]
 \begin{minipage}[!h]{0.5\linewidth}
 %\centering
 \includegraphics[width=0.9\textwidth]{chap3/left-tVSz.eps}
-\subcaption{时间对~Z~的分布}
+\subcaption{时间对击中位置的分布}
 \label{fig:left-tVSz}
 \end{minipage}%
 \hfill
@@ -19,12 +19,12 @@
 \subcaption{时间对~TOT~的分布}
 \label{fig:left-tVSq}
 \end{minipage}
-\caption{时间对~Z~和~TOT~的分布}
+\caption{时间对击中位置和过阈时间的分布}
 \end{figure}
 
-\section{~Z~的修正}
-刻度修正的主要项之一就是~Z~项的修正。图~\ref{fig:left-tVSz}~时间与~Z~项的分布关系相对简单，几乎是线性关系。这一项主要是信号在对数条内的传播时间。
-\subsection{Z~向等区间分~bin~}
+\section{击中位置的修正}
+刻度修正的主要项之一就是击中位置项的修正。图~\ref{fig:left-tVSz}~时间与击中位置项的分布关系相对简单，几乎是线性关系。这一项主要是信号在对数条内的传播时间。图~\ref{fig:left-tVSz}~中的斜率表示的信号在读数条的传播速度。
+\subsection{击中位置等区间分~bin~}
 
 \begin{figure}[htbp]
 \centering
@@ -33,7 +33,7 @@
 \label{fig:left-z}
 \end{figure}
 
-图~\ref{fig:left-z}~是击中位置~Z~的分布。可以看出，在此方向上事例数是均匀分布的，因此对~Z~的分~bin~采用等区间分~bin~。
+图~\ref{fig:left-z}~是击中位置的分布。可以看出，在此方向上事例数是均匀分布的，因此对击中位置的分~bin~采用等区间分~bin~。
 
 图~\ref{fig:13bin}~是单个~bin~的时间分布。可以看出，这个分布左右并不完全对称，故不适合采用高斯拟合。考虑过采用朗道卷积一个高斯的拟合，但拟合的也并不十分贴切。
 
@@ -72,7 +72,7 @@ f_{Nov}(m)=Aexp(\frac{-ln^2(1+t\frac{sinh(t\sqrt{ln4})}{t\sqrt{ln4}}\frac{m-m_{0
 \label{fig:10geDraw}
 \end{figure}
 
-然后尝试~Nov~公式对10个~bin~拟合情况。见图~\ref{fig:10geDraw}~，可以看出每个~bin~的拟合都比较好。所以对于~Z~分~bin~后就采用~Novsibirsk~公式进行拟合。
+然后尝试~Nov~公式对10个~bin~拟合情况。见图~\ref{fig:10geDraw}~，可以看出每个~bin~的拟合都比较好。所以对于击中位置分~bin~后就采用~Novsibirsk~公式进行拟合。
 
 \subsection{对得到的~graph~点采用三阶多项式拟合}
 上一小节研究得到了分~bin~后的每个~bin~的中心值。对此采用一个多项式拟合。如图~\ref{fig:z-fit}~
@@ -80,15 +80,14 @@ f_{Nov}(m)=Aexp(\frac{-ln^2(1+t\frac{sinh(t\sqrt{ln4})}{t\sqrt{ln4}}\frac{m-m_{0
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{chap3/z-fit.eps}
-\caption{对~Z~三阶多项式拟合}
+\caption{对击中位置采用三阶多项式拟合}
 \label{fig:z-fit}
 \end{figure}
 
-选用三阶多项式的原因，是因为更低阶的多项式不能完全拟合出时间对~Z~的趋势，而更高阶的多项式也不能拟合的更出色了。
+这里选用的三阶多项式拟合。可以拟合出时间随击中位置的变化趋势。
+\section{过阈时间的修正}
 
-\section{TOT~的修正}
-
-图~\ref{fig:afterCorZ-TOT}~是利用上述方法修正完~Z~后的时间对~TOT~的分布，此时时间对~TOT~的分布已经比修正~Z~前的时间和~TOT~的分布简单了。
+图~\ref{fig:afterCorZ-TOT}~是利用上述方法修正完击中位置后的时间对过于世家的分布，此时时间对过阈时间的分布已经比修正击中位置前的简单了。
 
 \begin{figure}[htbp]
 \centering
@@ -113,12 +112,12 @@ p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3
 \label{eq:6}    
 \end{align}
 
-比较公式~\ref{eq:1}~,~\ref{eq:2}~,~\ref{eq:3}~,~\ref{eq:4}~,~\ref{eq:5}~,~\ref{eq:6}~拟合的好坏，以及最终的时间分辨，分辨随~Z~和~TOT~，~tofid~，~strip~等的分布，决定哪个是时间与~TOT~关系的主项。
+比较公式~\ref{eq:1}~,~\ref{eq:2}~,~\ref{eq:3}~,~\ref{eq:4}~,~\ref{eq:5}~,~\ref{eq:6}~拟合的好坏，以及最终的时间分辨，分辨随~击中位置和过阈时间，MRPC模块的编号，读数条的编号等的分布，决定哪个是时间与过阈时间关系的主项。
 
 \subsection{尝试各种公式}
 
 图~\ref{fig:single-formula}~是上述几种公式拟合的结果。
-就这一条的拟合结果来看，公式~\ref{eq:5}~,也就是${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$的拟合最好。
+就这一条的拟合结果来看，公式~\ref{eq:3}~,~\ref{eq:4}~，~\ref{eq:5}~，~\ref{eq:6}~拟合的都不错。
 
 \begin{figure}[!h]
 \begin{minipage}{0.5\linewidth}
@@ -160,9 +159,9 @@ p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3
 \label{fig:single-formula}
 \end{figure}
 
-表~\ref{tbl:resolution}~给出了这几种公式修正完成后得到的时间分辨。可以看出公式${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$的结果是最好的。
+表~\ref{tbl:resolution}~给出了这几种公式修正完成后得到的时间分辨。
 
-在此研究的基础上随机选了两个模块，然后比较几种公式修正得到的时间分辨的。见图~\ref{fig:single-module45}~和图~\ref{fig:single-module50}~。可以看出，除了使用多项式外，公式${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$得到的时间分辨基本是最好的。而不选用多项式的原因是因为，多项式拟合在~TOT~比较大的一端拟合的不好，并未真正的反映出时间随~TOT~在大~TOT~下趋于平滑的这种趋势。
+在此研究的基础上随机选了两个模块，然后比较几种公式修正得到的时间分辨的。见图~\ref{fig:single-module45}~和图~\ref{fig:single-module50}~。可以看出，除了使用多项式外，公式${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$得到的时间分辨基本是最好的。对于多项式拟合而言，在~TOT~比较大的一端拟合的并不足够好，并未真正的反映出时间随过阈时间随着过阈时间的增大逐渐趋于平滑的这种趋势。
 
 \begin{table}[h]
     \centering
@@ -203,7 +202,7 @@ p_{0}+p_{1}*q+p_{2}*q^{2}+p_{3}*q^3
 
 \section{小结}
 
-上章利用插值方法对MRPC的离线数据进行刻度，这章从另一个角度构造公式入手进行刻度。对于~Z~的修正，采用分~bin~，每个~bin~采用一个非对称的公式~Novosibirsk~拟合，最后对~Z~的修正采用一个三阶多项式拟合。而对于~TOT~拟合，经过比较几种公式，包括每个公式拟合的符合程度，以及随机选用两块比较这些公式的时间分辨。最终选用公式~${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$~作为~TOT~的修正公式。而下一章双端的修正，更说明了公式~${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$~是这些公式中拟合最好的，并且适用性最好的。
+上章利用插值方法对MRPC的离线数据进行刻度，这章从另一个角度构造公式入手进行刻度。对于击中位置的修正，采用分~bin~，每个~bin~采用一个非对称的公式~Novosibirsk~拟合，最后对击中位置的修正采用一个三阶多项式拟合。而对于过阈时间的拟合，经过比较几种公式，包括每个公式拟合的符合程度，以及随机选用两块比较这些公式的时间分辨。其中~${p_{0}+p_{1}/\sqrt{q}+p_{2}/q}$~是重点考虑的公式。
 
 
 
