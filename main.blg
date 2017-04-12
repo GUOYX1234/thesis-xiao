@@ -1,8 +1,15 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: unsrt.bst
+A level-1 auxiliary file: chapter/sub_abstract.aux
+A level-1 auxiliary file: chapter/chap0.aux
+A level-1 auxiliary file: chapter/chap1.aux
 A level-1 auxiliary file: chapter/chap2.aux
 A level-1 auxiliary file: chapter/chap3.aux
 A level-1 auxiliary file: chapter/chap4.aux
+A level-1 auxiliary file: chapter/chap5.aux
+A level-1 auxiliary file: chapter/chap6.aux
+A level-1 auxiliary file: chapter/resume.aux
+A level-1 auxiliary file: chapter/thanks.aux
 Database file #1: tex.bib
 I was expecting a `,' or a `}'---line 132 of file tex.bib
  :       address =      {北京}
@@ -18,11 +25,11 @@ You're missing a field name---line 439 of file tex.bib
  : %      pages          = "521"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--empty title in yuancz:2002
 Warning--empty journal in ihep:2003
 Warning--empty journal in ihep:2006
-Warning--empty journal in M:2014
-Warning--empty journal in liwd:2006
+Warning--empty title in yuancz:2002
 Warning--empty journal in Barrand:2000
+Warning--empty journal in liwd:2006
 Warning--empty journal in Nov:2000aa
+Warning--empty journal in M:2014
 (There were 3 error messages)

@@ -1,21 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Shao:2009aa}
-Ming Shao. et~al.
-\newblock {Upgrade of the calibration procedure for a STAR time-of-flight
-  detector with new electronics}.
-\newblock {\em IOP science.}, 20:025102, 2009.
-
-\bibitem{Bian:2010aa}
-BIAN jian Ming. et~al.
-\newblock {Abosolute photon energy calibration for the BESIII EMC}.
-\newblock {\em Chinese Physics C}, 34:72--77, 2010.
-
-\bibitem{2014lv}
-{吕才典}.
-\newblock {\em 粒子物理学}.
-\newblock 讲义，中科院高能所, 2014.
-
 \bibitem{ATLAS:2012}
 G.~Aad. et~al.
 \newblock {(ATLAS Collaboration)}.
@@ -26,15 +10,20 @@ S.Chatrchyan. et~al.
 \newblock {(CMS Collaboration)}.
 \newblock {\em Phys.Lett.B}, 716:30--61, 2012.
 
-\bibitem{duds2015}
-{杜东生,~杨茂志}.
-\newblock {\em 粒子物理导论}.
-\newblock 北京科学出版社, 2014.
+\bibitem{2014lv}
+{吕才典}.
+\newblock {\em 粒子物理学}.
+\newblock 讲义，中科院高能所, 2014.
 
 \bibitem{zhangns2015}
 {章乃森}.
 \newblock {\em 粒子物理学[M]}.
 \newblock 北京科学出版社, 北京, 1968.
+
+\bibitem{duds2015}
+{杜东生,~杨茂志}.
+\newblock {\em 粒子物理导论}.
+\newblock 北京科学出版社, 2014.
 
 \bibitem{S.Weinberg:1967}
 S.~Weinberg..
@@ -61,35 +50,6 @@ S.~Weinberg..
 \newblock {\em 诺贝尔物理学奖百年回顾}.
 \newblock 国防工业出版社, 2003.
 
-\bibitem{zhengzp2009}
-{郑志鹏主编}.
-\newblock {\em 北京谱仪II正负电子物理(第一版)}.
-\newblock 中国科学技术大学出版社, 2009.
-
-\bibitem{wangyf2011}
-{王贻芳主编}.
-\newblock {\em 北京谱仪(BESIII)的设计与研制}.
-\newblock 上海科学技术出版社, 2011.
-
-\bibitem{wangyf2011ww}
-{王贻芳主编}.
-\newblock {\em 北京谱仪(BESIII)的设计与研制}.
-\newblock 上海科学技术出版社, 2011.
-
-\bibitem{BESIII:2013}
-M.Ablilim. et~al.
-\newblock {(BESIII Collaboration)}.
-\newblock {\em Phys.Rev.Lett}, 110:252001, 2013.
-
-\bibitem{yuancz:2002}
-Yuan~C Z. et~al.
-\newblock {\em 高能物理与核物理}, 24(12):1201, 2002.
-
-\bibitem{chaokt:2009}
-Wang Y~F. Chao K~T et~al.
-\newblock {physics at BESIII}.
-\newblock {\em Int. J. Mod. Phys.}, A 24(1), 2009.
-
 \bibitem{xiejl1996}
 {谢家麟等}.
 \newblock {\em 北京正负电子对撞机和北京谱仪}.
@@ -105,11 +65,35 @@ Wang Y~F. Chao K~T et~al.
 \newblock {北京正负电子对撞机重大改造工程(BEPCII)}.
 \newblock 2006.
 
+\bibitem{BESIII:2013}
+M.Ablilim. et~al.
+\newblock {(BESIII Collaboration)}.
+\newblock {\em Phys.Rev.Lett}, 110:252001, 2013.
+
+\bibitem{zhengzp2009}
+{郑志鹏主编}.
+\newblock {\em 北京谱仪II正负电子物理(第一版)}.
+\newblock 中国科学技术大学出版社, 2009.
+
 \bibitem{M.A:2010}
 M.Ablikim. et~al.
 \newblock {Design and Construction of the BESIII Detector}.
 \newblock {\em Nuclear Instruments and Methods in Physics Research A},
   614:345--399, 2010.
+
+\bibitem{yuancz:2002}
+Yuan~C Z. et~al.
+\newblock {\em 高能物理与核物理}, 24(12):1201, 2002.
+
+\bibitem{chaokt:2009}
+Wang Y~F. Chao K~T et~al.
+\newblock {physics at BESIII}.
+\newblock {\em Int. J. Mod. Phys.}, A 24(1), 2009.
+
+\bibitem{wangyf2011}
+{王贻芳主编}.
+\newblock {\em 北京谱仪(BESIII)的设计与研制}.
+\newblock 上海科学技术出版社, 2011.
 
 \bibitem{ruanlj:2005}
 阮丽娟等.
@@ -127,17 +111,6 @@ Yi~Wang. et~al.
 \newblock {Production and quality control of STAR-TOF MRPC}.
 \newblock {\em Nuclear Instruments and Methods in Physics Research A},
   613:200--206, 2010.
-
-\bibitem{M:2014}
-M.~Ullrich. et~al.
-\newblock {Implementation of a Multigap-Resistive Plate-Chamber as Time of
-  Flight Detector into the BOSS Framework}.
-\newblock April 6,2014.
-
-\bibitem{A.A:2005}
-A.~Akindinov. et~al.
-\newblock {Performance of the ALICE Time-Of-Flight detector at the LHC}.
-\newblock {\em Eur. Phys. J. Plus}, 128, 2013.
 
 \bibitem{A.Alici:2012}
 A.~Alici.
@@ -163,20 +136,15 @@ ZHAO Chuan. et~al.
   {北京谱仪端盖飞行时间探测器升级改造的MRPC性能研究}}.
 \newblock 中国科学技术大学博士论文, 2016.
 
-\bibitem{he:2014}
-K.L.He.
-\newblock {Status and Plan for Analysis and Tools software}.
-\newblock {\em BESIII CollaborationMeeting}, 2007.
+\bibitem{Barrand:2000}
+Barrand G. et~al.
+\newblock {Proceeding of CHEP2000}.
+\newblock February 6-12,2000.
 
 \bibitem{liwd:2006}
 Liu H~M. Li~W~D et~al.
 \newblock {Proceeding of CHEP06}.
 \newblock February 13-17,2006.
-
-\bibitem{Barrand:2000}
-Barrand G. et~al.
-\newblock {Proceeding of CHEP2000}.
-\newblock February 6-12,2000.
 
 \bibitem{root}
 root.
@@ -186,15 +154,25 @@ root.
 cern.
 \newblock \url{http://cernlib.web.cern.ch/cernlib/.}
 
+\bibitem{zhangxm:2005}
+张晓梅等.
+\newblock {}.
+\newblock {\em 核电子学与探测技术}, 25(6):638, 2005.
+
 \bibitem{max:2007}
 马想等.
 \newblock {}.
 \newblock {\em 核电子学与探测技术}, 27(4):670, 2007.
 
-\bibitem{zhangxm:2005}
-张晓梅等.
-\newblock {}.
-\newblock {\em 核电子学与探测技术}, 25(6):638, 2005.
+\bibitem{Maxiang:2008}
+Ma~Xiang. et~al.
+\newblock {Determination of event start time at BESIII}.
+\newblock {\em Chinese Physics C.}, 32(9), Sep., 2008.
+
+\bibitem{wangll:2014}
+王亮亮等.
+\newblock {BESⅢ主漂移室径迹的外推和径迹匹配}.
+\newblock {\em 高能物理与核物理}, 31(2), Feb.,2007.
 
 \bibitem{wulh2007}
 {伍灵慧}.
@@ -206,19 +184,41 @@ cern.
 \newblock {\em {BESIII径迹拟合算法与GPUPWA的相关开发}}.
 \newblock 中国科学院高能物理研究所博士论文, 2009.
 
-\bibitem{wangll:2014}
-王亮亮等.
-\newblock {BESⅢ主漂移室径迹的外推和径迹匹配}.
-\newblock {\em 高能物理与核物理}, 31(2), Feb.,2007.
+\bibitem{Shao:2009aa}
+Ming Shao. et~al.
+\newblock {Upgrade of the calibration procedure for a STAR time-of-flight
+  detector with new electronics}.
+\newblock {\em IOP science.}, 20:025102, 2009.
 
-\bibitem{Maxiang:2008}
-Ma~Xiang. et~al.
-\newblock {Determination of event start time at BESIII}.
-\newblock {\em Chinese Physics C.}, 32(9), Sep., 2008.
+\bibitem{Bian:2010aa}
+BIAN jian Ming. et~al.
+\newblock {Abosolute photon energy calibration for the BESIII EMC}.
+\newblock {\em Chinese Physics C}, 34:72--77, 2010.
 
 \bibitem{Nov:2000aa}
 Bauer A~J M.
 \newblock {BaBar Note 521}.
 \newblock 2000.
+
+\bibitem{wangyf2011ww}
+{王贻芳主编}.
+\newblock {\em 北京谱仪(BESIII)的设计与研制}.
+\newblock 上海科学技术出版社, 2011.
+
+\bibitem{M:2014}
+M.~Ullrich. et~al.
+\newblock {Implementation of a Multigap-Resistive Plate-Chamber as Time of
+  Flight Detector into the BOSS Framework}.
+\newblock April 6,2014.
+
+\bibitem{A.A:2005}
+A.~Akindinov. et~al.
+\newblock {Performance of the ALICE Time-Of-Flight detector at the LHC}.
+\newblock {\em Eur. Phys. J. Plus}, 128, 2013.
+
+\bibitem{he:2014}
+K.L.He.
+\newblock {Status and Plan for Analysis and Tools software}.
+\newblock {\em BESIII CollaborationMeeting}, 2007.
 
 \end{thebibliography}

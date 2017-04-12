@@ -247,12 +247,14 @@
   \fancyhf{}
   \fancyhead[CE]{\small \CAST@value@titlemark}  %偶数页眉为论文题目，居中
   \fancyhead[CO]{\small \leftmark}              %奇数页眉为各章题目，居中
-  \fancyfoot[LE,RO]{\small ~\thepage~}          %页脚为阿拉伯数字的页码，偶数页左端对齐，奇数页右端对齐
+  \fancyfoot[CE,CO]{~\thepage~}          %页脚为大写罗马的页码，居中
+%  \fancyfoot[LE,RO]{~\thepage~}          %页脚为阿拉伯数字的页码，偶数页左端对齐，奇数页右端对齐
   %\fancyhead[RE]{\small \CAST@value@titlemark}
   %\fancyhead[LO]{\small \leftmark}
   %\fancyhead[LE,RO]{\small ~\thepage~}
 \newenvironment{abstract}
   {\Nchapter{\CAST@label@abstract}}
+%  {\fancyfoot[CE,CO]{\small ~\thepage~}}          %页脚为阿拉伯数字的页码，偶数页左端对齐，奇数页右端对齐
   {}
 \newcommand\keywords[1]{%
   \vspace{2ex}\noindent{\heiti \CAST@label@keywords} #1}

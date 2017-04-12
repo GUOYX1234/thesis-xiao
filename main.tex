@@ -69,6 +69,7 @@
   %\makeenglishtitle
 
   \includepdfmerge{cover.pdf, 1-4}
+%  \includepdfmerge{coversecret.pdf, 1-4}
   \includepdfmerge{statement.pdf}                 %直接插入中文，英文的封面
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,8 +77,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
 
+  \pagenumbering{Roman}                  %设置页脚为大写的Roman字符
+  %\setcounter{page}{0}
+ 
+
   % 摘要
-%  \include{chapter/sub_abstract}
+  \include{chapter/sub_abstract}
 
   % 目录
   \tableofcontents
@@ -91,6 +96,12 @@
 %% 正文部分
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
+
+  \pagestyle{fancy} % 选用 fancy style
+  \fancyhf{}   %注释掉之前设置的页眉页脚格式
+  \fancyhead[CE]{\small \leftmark}
+  \fancyhead[CO]{\small \rightmark}
+  \fancyfoot[LE,RO]{\small ~\thepage~}
 
   \include{chapter/chap0}
   \include{chapter/chap1}
@@ -110,6 +121,7 @@
 %% 附件部分
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
+%  \fancyfoot[LE,RO]{\small ~\thepage~}          %页脚为阿拉伯数字的页码，偶数页左端对齐，奇数页右端对齐
 
   % 参考文献
   % 使用 BibTeX
