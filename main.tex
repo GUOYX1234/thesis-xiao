@@ -69,8 +69,10 @@
   %\makeenglishtitle
 
   \includepdfmerge{cover.pdf, 1-4}
-%  \includepdfmerge{coversecret.pdf, 1-4}
+%%%%%  \includepdfmerge{coversecret.pdf, 1-4}
   \includepdfmerge{statement.pdf}                 %直接插入中文，英文的封面
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 前言部分
@@ -92,16 +94,11 @@
   \listoffigures
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 正文部分
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
-
-  \pagestyle{fancy} % 选用 fancy style
-  \fancyhf{}   %注释掉之前设置的页眉页脚格式
-  \fancyhead[CE]{\small \leftmark}
-  \fancyhead[CO]{\small \rightmark}
-  \fancyfoot[LE,RO]{\small ~\thepage~}
 
   \include{chapter/chap0}
   \include{chapter/chap1}
@@ -110,6 +107,7 @@
   \include{chapter/chap4}
   \include{chapter/chap5}
   \include{chapter/chap6}
+  \include{chapter/chap7}
 
   % 附录
 %  \appendix

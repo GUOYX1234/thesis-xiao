@@ -8,6 +8,7 @@ A level-1 auxiliary file: chapter/chap3.aux
 A level-1 auxiliary file: chapter/chap4.aux
 A level-1 auxiliary file: chapter/chap5.aux
 A level-1 auxiliary file: chapter/chap6.aux
+A level-1 auxiliary file: chapter/chap7.aux
 A level-1 auxiliary file: chapter/resume.aux
 A level-1 auxiliary file: chapter/thanks.aux
 Database file #1: tex.bib
@@ -25,6 +26,11 @@ You're missing a field name---line 439 of file tex.bib
  : %      pages          = "521"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+You're missing a field name---line 464 of file tex.bib
+ : 
+ : %      pages     = "291-352"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty journal in ihep:2003
 Warning--empty journal in ihep:2006
 Warning--empty title in yuancz:2002
@@ -32,4 +38,4 @@ Warning--empty journal in Barrand:2000
 Warning--empty journal in liwd:2006
 Warning--empty journal in Nov:2000aa
 Warning--empty journal in M:2014
-(There were 3 error messages)
+(There were 4 error messages)
